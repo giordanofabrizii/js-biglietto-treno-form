@@ -16,6 +16,10 @@ let scontoUtente = false;
 let percentualeSconto;
 
 sendButtonEl.addEventListener("click", function(){    
+    // reset
+
+
+
     let kmUtente = kmInputEl.value;
     let etaUtente = etaInputEl.value;
     
@@ -35,10 +39,10 @@ sendButtonEl.addEventListener("click", function(){
         percentualeSconto = '37.893%'
     }
 
-    kmOutputEl.append(kmUtente);
-    etaOutputEl.append(etaUtente);
-    scontoOutputEl.append(percentualeSconto);
-    scontatoOutputEl.append(prezzo.toFixed(2));
+    kmOutputEl.innerHTML = (kmUtente);
+    etaOutputEl.innerHTML = (etaUtente);
+    scontoOutputEl.innerHTML = (percentualeSconto);
+    scontatoOutputEl.innerHTML = (prezzo.toFixed(2));
 
     bigliettoDiv.style.display = "block";
 
