@@ -26,7 +26,7 @@ sendButtonEl.addEventListener("click", function(){
     // calcolo il costo dello biglietto
     let prezzo = kmUtente * costoAlKm;
 
-    costoOutputEl.append(prezzo.toFixed(2));
+    costoOutputEl.innerHTML = (prezzo.toFixed(2));
 
     // sconto il biglietto
     if (etaUtente < 21) {
