@@ -16,23 +16,29 @@
 // > Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 
 const costoAlKm = 0.267113; // euro al km
+
 const sendButtonEl = document.getElementById("invia");
-const kmFormEl = document.getElementById("km");
-const etaFormEl = document.getElementById("eta");
+const kmInputEl = document.getElementById("kmInput");
+const etaInputEl = document.getElementById("etaInput");
+const kmOutputEl = document.getElementById("kmOutput");
+const etaOutputEl = document.getElementById("etaOutput");
+const costoOutputEl = document.getElementById("costoOutput");
 
 sendButtonEl.addEventListener("click", function(){
-    let kmUtente = kmFormEl.value ;
-    let etaUtente = etaFormEl.value ;
+    let kmUtente = kmInputEl.value ;
+    let etaUtente = etaInputEl.value ;
     
     // calcolo il costo dello biglietto
     let prezzo = kmUtente * costoAlKm;
 
     // sconto il biglietto
     if (etaUtente < 21) {
-        prezzo *= (1.0 - 0.24552)
+        prezzo *= (1.0 - 0.24552);
     } else if (etaUtente >= 63) {
-        prezzo *= (1.0 - 0.37893)
+        prezzo *= (1.0 - 0.37893);
     }
 
-    console.log(prezzo.toFixed(2));
+    kmOutputEl.append(kmUtente);
+    etaOutputEl.append(etaUtente);
+    costoOutputEl.append(prezzo.toFixed(2));
 });

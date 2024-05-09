@@ -8,14 +8,22 @@
 <body>
     <main>
         <div class="km-container">
-            <h2>Ciao, scrivi qui i chilometri che devi percorrere: </h2>
-            <input type="text" id="km">
+            <h1>Ciao, scrivi qui i chilometri che devi percorrere: </h1>
+            <input type="text" id="kmInput">
         </div>
         <div class="eta-container">
-            <h2>e qui la tua et&agrave;: </h2>
-            <input type="text" id="eta">
+            <h1>e qui la tua et&agrave;: </h1>
+            <input type="text" id="etaInput">
         </div>
         <button id="invia">Calcola il prezzo</button>
+
+        <div class="bilgietto">
+            <h1>Ecco i dati del tuo biglietto:</h1>
+            <p id="kmOutput">chilometri da percorrere: </p>
+            <p id="etaOutput">et&agrave; del passeggero: </p>
+            <p id="costoOutput">Costo del tuo biglietto: </p>
+           
+        </div>
     </main>
 
     <script src="./js/script.js"></script>
