@@ -15,3 +15,24 @@
 // > Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 // > Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 
+const costoAlKm = 0.267113; // euro al km
+const sendButtonEl = document.getElementById("invia");
+const kmFormEl = document.getElementById("km");
+const etaFormEl = document.getElementById("eta");
+
+sendButtonEl.addEventListener("click", function(){
+    let kmUtente = kmFormEl.value ;
+    let etaUtente = etaFormEl.value ;
+    
+    // calcolo il costo dello biglietto
+    let prezzo = kmUtente * costoAlKm;
+
+    // sconto il biglietto
+    if (etaUtente < 21) {
+        prezzo *= (1.0 - 0.24552)
+    } else if (etaUtente >= 63) {
+        prezzo *= (1.0 - 0.37893)
+    }
+
+    console.log(prezzo.toFixed(2));
+});
