@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#biglietto,
+#scontato {
+    display: none;
+}
+
+img{
+    width: 30%;
+    margin: 1rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#form{
+    background-color: aquamarine;
+    border-radius: 24px;
+    padding: 2rem;
+    height: 13rem;
+}
+
+#biglietto {
+    padding: 1rem;
+    height: 13rem;
+}
+
+.container {
+    background-color: rgb(173, 173, 173);
+    border-radius: 24px;
+}

@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto del Treno FORMale</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <div class="km-container">
-            <h1>Ciao, scrivi qui i chilometri che devi percorrere: </h1>
-            <input type="text" id="kmInput">
+    <div class="flex column">
+        <div class="flex">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1758C/production/_118582659_train.jpg" alt="">
         </div>
-        <div class="eta-container">
-            <h1>e qui la tua et&agrave;: </h1>
-            <input type="text" id="etaInput">
-        </div>
-        <button id="invia">Calcola il prezzo</button>
+        <main>
+            <div class="container">
+                <div id="form">
+                    <div class="km-container">
+                        <h1>Ciao, scrivi qui i chilometri che devi percorrere: </h1>
+                        <input type="text" id="kmInput">
+                    </div>
+                    <div class="eta-container">
+                        <h1>e qui la tua et&agrave;: </h1>
+                        <input type="text" id="etaInput">
+                    </div>
+                    <button id="invia">Calcola il prezzo</button>
+                </div>
 
-        <div class="bilgietto">
-            <h1>Ecco i dati del tuo biglietto:</h1>
-            <p id="kmOutput">chilometri da percorrere: </p>
-            <p id="etaOutput">et&agrave; del passeggero: </p>
-            <p id="costoOutput">Costo del tuo biglietto: </p>
-           
-        </div>
-    </main>
+                <div id="biglietto">
+                    <h1>Ecco i dati del tuo biglietto:</h1>
+                    <p id="kmOutput">chilometri da percorrere: </p>
+                    <p id="etaOutput">et&agrave; del passeggero: </p>
+                    <p id="costoOutput">Costo del tuo biglietto: </p>
+                    <div id="scontato">
+                        <h2>Sono stati applicati degli sconti per la tua et&agrave;: </h2>
+                        <pre id="scontoOutput">Percentuale dello sconto: </pre>
+                        <pre id="prezzoScontatoOutput">Prezzo finale: </pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
